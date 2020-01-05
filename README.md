@@ -8,6 +8,7 @@ Design Consideration:
 # Database Design
 Table: credit_transaction
 columns:
+
 | column name  | description |
 | ------------ | ----------- |
 | id  | detail id  |
@@ -18,13 +19,8 @@ columns:
 | created_time  | earn or consume time  |
 | expired_time  | credit expire date  |
 
-id -- 
-user_id -- user id
-channel_id -- earn channel or consume channel id, like order, marketing
-event_id -- related event id, for example, order id, comment id, activity id
-credit -- earn is positive, consume is negative
-created_time -- earn or consume time
-expired_time -- credit expire date
+
+
 
 # API Design
 name 
