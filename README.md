@@ -23,6 +23,19 @@ columns:
 
 
 # API Design
-name 
+| API name  | parameters | return value |
+|-----------|------------|--------------|
+| credit/earn | userId, channelId, eventId, credit, expiredTime | credit transaction id |
+| credit/consume | userId, channelId, eventId, credit, expiredTime | credit transaction id |
+| credit/summary | userId | total credit |
+| credit/detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime, expiredTime |
+| credit/earn-detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime, expiredTime |
+| credit/consume-detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime, expiredTime |
 
-Business Object Design
+# Business Object Design
+Simple system, so Anemic Domain Model is enough.
+
+# layers
+Controller -- VO (View Object)
+Service -- BO (Business Object)
+Repository -- Entity
