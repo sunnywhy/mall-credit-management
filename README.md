@@ -17,7 +17,7 @@ columns:
 | event_id  | related event id, for example, order id, comment id, activity id  |
 | credit  | earn is positive, consume is negative  |
 | created_time  | earn or consume time  |
-| expired_time  | credit expire date  |
+
 
 
 
@@ -25,12 +25,12 @@ columns:
 # API Design
 | API name  | parameters | return value |
 |-----------|------------|--------------|
-| credit/earn | userId, channelId, eventId, credit, expiredTime | credit transaction id |
-| credit/consume | userId, channelId, eventId, credit, expiredTime | credit transaction id |
+| credit/earn | userId, channelId, eventId, credit | credit transaction id |
+| credit/consume | userId, channelId, eventId, credit | credit transaction id |
 | credit/summary | userId | total credit |
-| credit/detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime, expiredTime |
-| credit/earn-detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime, expiredTime |
-| credit/consume-detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime, expiredTime |
+| credit/detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime |
+| credit/earn-detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime |
+| credit/consume-detail | userId, paging parameters | id, userId, channelId, eventId, credit, createdTime |
 
 # Business Object Design
 Simple system, so Anemic Domain Model is enough.
